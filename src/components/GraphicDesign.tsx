@@ -9,9 +9,10 @@ const GraphicDesign = () => {
     {
       title: "Mitti & Co - Coming Soon Campaign",
       description: "Brand identity and coming soon campaign for sustainable food brand",
-      image: "/lovable-uploads/acf54b56-db0c-465a-b281-1d6a4e44292c.png",
-      category: "Brand Identity",
-      tools: ["Photoshop", "After Effects"]
+      image: "https://res.cloudinary.com/dvvhyfrjr/image/upload/v1758167467/vlcsnap-2025-09-18-09h13m54s428_c2vwhp.png",
+      Video:"https://res.cloudinary.com/dvvhyfrjr/video/upload/v1758165437/landscape_view_a5i1c1.mp4",
+      category: "VFX",
+      tools: ["Photoshop", "After Effects","Blender"]
     },
     {
       title: "Mitti & Co - Brand Styling",
@@ -50,7 +51,7 @@ const GraphicDesign = () => {
     }
   ];
 
-  const categories = [ "All","Motion Graphics ", "Packaging/Product Design", "Logo Animation", "VFX"];
+  const categories = [ "Blender","Motion Graphics ", "Packaging/Product Design", "Logo Animation", "VFX"];
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects = activeCategory === "All" 
@@ -104,18 +105,38 @@ const GraphicDesign = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => openLightbox(project.image)}
             >
-              <div className="relative overflow-hidden rounded-xl bg-white shadow-soft hover:shadow-medium transition-all duration-300 group-hover:scale-105">
-                <div className="aspect-[4/5] overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-rich-brown/0 group-hover:bg-rich-brown/20 transition-all duration-300 flex items-center justify-center">
-                    <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={32} />
-                  </div>
-                </div>
-                
+             <div className="relative overflow-hidden rounded-xl bg-white shadow-soft hover:shadow-medium transition-all duration-300 group-hover:scale-105">
+  <div className="aspect-[4/5] overflow-hidden relative">
+    {/* Image fallback */}
+    <img
+      src={project.image}
+      alt={project.title}
+      className={`w-full h-full object-cover transition-transform duration-500 
+        ${project.Video ? "group-hover:scale-110 group-hover:opacity-0" : "opacity-100"}`}
+    />
+
+    {/* Hover video (only if exists) */}
+    {project.Video && (
+      <video
+        src={project.Video}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+      />
+    )}
+
+    {/* Overlay with ZoomIn icon */}
+    <div className="absolute inset-0 bg-rich-brown/0 group-hover:bg-rich-brown/20 transition-all duration-300 flex items-center justify-center">
+      <ZoomIn
+        className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        size={32}
+      />
+    </div>
+  </div>
+</div>
+
                 <div className="p-6">
                   <div className="text-sm text-primary font-medium mb-2">{project.category}</div>
                   <h3 className="text-lg font-semibold text-rich-brown mb-2">{project.title}</h3>
@@ -133,7 +154,7 @@ const GraphicDesign = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            
           ))}
         </div>
 
