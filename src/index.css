@@ -167,6 +167,20 @@ All colors MUST be HSL.
 
   
 }
+.smooth-scroll-support html {
+  scroll-behavior: smooth;
+}
+
+/* Offset anchors for fixed navbar height (adjust if navbar height changes) */
+[id] {
+  scroll-margin-top: 80px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
 .typewriter .press-start-2p-regular1 {
   display: inline-block;
   overflow: hidden;

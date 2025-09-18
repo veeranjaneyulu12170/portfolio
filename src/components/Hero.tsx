@@ -22,7 +22,7 @@ const Hero = () => {
 
   // Show sections after 3 seconds
   useEffect(() => {
-    const timer = setTimeout(() => setShowSections(true), 5000);
+    const timer = setTimeout(() => setShowSections(true), 1000);
     return () => clearTimeout(timer);
   }, []);
 
