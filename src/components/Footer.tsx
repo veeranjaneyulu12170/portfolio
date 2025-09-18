@@ -16,7 +16,7 @@ const Footer = () => {
     },
     {
       icon: <Mail className="w-5 h-5" />,
-      url: "mailto:hello@yourname.dev",
+      url: "Veerapepakayala193@gmail.com",
       name: "Email"
     }
   ];
@@ -31,17 +31,17 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold bg-gradient-warm bg-clip-text text-transparent mb-4">
+            <h3 className="press-start-2p-regular1 text-2xl font-bold bg-gradient-warm bg-clip-text text-transparent mb-4">
               Portfolio
             </h3>
-            <p className="text-white/80 leading-relaxed">
+            <p className=" font-mono text-white/80 leading-relaxed">
               Creative developer crafting digital experiences that blend technology with artistry. 
               Specializing in full-stack development, UI/UX design, and visual effects.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="font-mono">
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <div className="space-y-2">
               {[
@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="font-mono">
             <h4 className="text-lg font-semibold mb-4">Get in Touch</h4>
             <div className="space-y-2 text-white/80">
               <p>Ready to start your next project?</p>
@@ -71,7 +71,7 @@ const Footer = () => {
                 href="mailto:hello@yourname.dev"
                 className="block hover:text-warm-orange transition-colors duration-300"
               >
-                hello@yourname.dev
+                veerapepakayala193@gmail.com
               </a>
               <p className="text-sm">Available worldwide for remote work</p>
             </div>

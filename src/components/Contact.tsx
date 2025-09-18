@@ -53,38 +53,38 @@ const Contact = () => {
     {
       icon: <Mail className="w-5 h-5" />,
       title: "Email",
-      value: "hello@yourname.dev",
+      value: "veerapepakayala193@gmail.com",
       link: "mailto:hello@yourname.dev"
     },
     {
       icon: <Phone className="w-5 h-5" />,
       title: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+91 8374526976",
       link: "tel:+15551234567"
     },
     {
       icon: <MapPin className="w-5 h-5" />,
       title: "Location",
-      value: "Available Worldwide",
+      value: "Andhra Pradesh",
       link: null
     }
   ];
 
   const socialLinks = [
     {
-      icon: <Github className="w-6 h-6" />,
+      icon: <Github className="font-mono text-white w-6 h-6" />,
       name: "GitHub",
       url: "https://github.com/veeranjaneyulu12170"
     },
     {
-      icon: <Linkedin className="w-6 h-6" />,
+      icon: <Linkedin className="font-mono text-white w-6 h-6" />,
       name: "LinkedIn", 
       url: "https://linkedin.com"
     },
     {
-      icon: <Mail className="w-6 h-6" />,
+      icon: <Mail className="font-mono text-white w-6 h-6" />,
       name: "Email",
-      url: "mailto:hello@yourname.dev"
+      url: "veeranjaneyulupepakayala@gmail.com"
     }
   ];
 
@@ -92,20 +92,20 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-rich-brown mb-4">
+          <h2 className="text-white press-start-2p-regular1 text-2xl md:text-5xl font-bold text-rich-brown mb-4">
             Let's Work Together
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-white font-mono text-lg text-muted-foreground max-w-2xl mx-auto">
             Ready to bring your ideas to life? Let's discuss your next project and create something amazing together.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto bg-green  backdrop-blur-sm ">
           {/* Contact Form */}
           <Card className="shadow-soft">
             <CardHeader>
-              <CardTitle className="text-2xl text-rich-brown">Send a Message</CardTitle>
-              <CardDescription>
+              <CardTitle className="text-white press-start-2p-regular1 text-xl ">Send a Message</CardTitle>
+              <CardDescription className="text-white font-mono">
                 Fill out the form below and I'll get back to you within 24 hours.
               </CardDescription>
             </CardHeader>
@@ -113,7 +113,7 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="name" className="block text-white font-mono text-sm font-medium text-foreground mb-2">
                       Name *
                     </label>
                     <Input
@@ -127,7 +127,7 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="email" className="font-mono text-white block text-sm font-medium text-foreground mb-2">
                       Email *
                     </label>
                     <Input
@@ -143,7 +143,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="subject" className="font-mono text-white block text-sm font-medium text-foreground mb-2">
                     Subject
                   </label>
                   <Input
@@ -157,7 +157,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="message" className="font-mono text-white block text-sm font-medium text-foreground mb-2">
                     Message *
                   </label>
                   <Textarea
@@ -184,32 +184,32 @@ const Contact = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-8 bg-green  backdrop-blur-sm ">
             {/* Contact Details */}
             <Card className="shadow-soft">
               <CardHeader>
-                <CardTitle className="text-xl text-rich-brown">Get in Touch</CardTitle>
-                <CardDescription>
+                <CardTitle className="press-start-2p-regular1 text-white text-xl">Get in Touch</CardTitle>
+                <CardDescription className="font-mono text-white">
                   Prefer to reach out directly? Here's how you can contact me.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 {contactInfo.map((info) => (
                   <div key={info.title} className="flex items-center space-x-4">
-                    <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                    <div className="font-mono text-white p-2 bg-primary/10 rounded-lg text-primary">
                       {info.icon}
                     </div>
                     <div>
-                      <div className="font-medium text-foreground">{info.title}</div>
+                      <div className="font-mono text-white font-medium text-foreground">{info.title}</div>
                       {info.link ? (
                         <a 
                           href={info.link}
-                          className="text-muted-foreground hover:text-primary transition-colors"
+                          className="font-mono text-white text-muted-foreground hover:text-primary transition-colors"
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <div className="text-muted-foreground">{info.value}</div>
+                        <div className="font-mono text-white text-muted-foreground">{info.value}</div>
                       )}
                     </div>
                   </div>
@@ -218,15 +218,15 @@ const Contact = () => {
             </Card>
 
             {/* Social Links */}
-            <Card className="shadow-soft">
+            <Card className="shadow-soft bg-green  backdrop-blur-sm ">
               <CardHeader>
-                <CardTitle className="text-xl text-rich-brown">Connect Online</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-xl press-start-2p-regular1 text-white">Connect Online</CardTitle>
+                <CardDescription className="font-mono text-white">
                   Follow my work and connect on social platforms.
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="flex space-x-4">
+                <div className=" font-mono text-white flex space-x-4">
                   {socialLinks.map((social) => (
                     <a
                       key={social.name}
@@ -243,13 +243,13 @@ const Contact = () => {
             </Card>
 
             {/* Availability */}
-            <Card className="shadow-soft bg-soft-beige">
+            <Card className="shadow-soft bg-soft-beige bg-green  backdrop-blur-sm ">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
                   <div className="text-2xl">🚀</div>
                   <div>
-                    <div className="font-semibold text-rich-brown">Available for Projects</div>
-                    <div className="text-muted-foreground text-sm">
+                    <div className="font-semibold font-mono text-white">Available for Projects</div>
+                    <div className="font-mono text-white text-muted-foreground text-sm">
                       Currently accepting new projects and collaborations
                     </div>
                   </div>

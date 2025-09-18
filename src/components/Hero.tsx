@@ -342,24 +342,26 @@ const Hero = () => {
       {/* Spline 3D Background */}
       <div className="absolute inset-0 w-full h-full bg-black">
         {!showFallback && (
-          <iframe
-            src="https://my.spline.design/chatgptkeyboard-ZMB3GS2L1zFsCZbGik3Yvr31/"
-            frameBorder="0"
-            width="100%"
-            height="100%"
-            className={`transition-all duration-1000 ${
-              isSplineLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
-            }`}
-            onLoad={handleSplineLoad}
-            style={{
-              pointerEvents: 'auto',
-              transform: 'scale(1)',
-            }}
-            loading="eager"
-            title="3D Computer Animation"
-            allow="accelerometer; gyroscope"
-            sandbox="allow-scripts allow-same-origin"
-          />
+       <iframe
+       src="https://my.spline.design/chatgptkeyboard-ZMB3GS2L1zFsCZbGik3Yvr31/"
+       frameBorder="0"
+       width="100%"
+       height="600px"   // give it a fixed or min height to avoid collapsing
+       className={`transition-all duration-1000 ${
+         isSplineLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
+       }`}
+       onLoad={handleSplineLoad}
+       style={{
+         pointerEvents: 'auto',
+         transform: 'scale(1)',
+         minHeight: '500px',   // safeguard for parent layout
+       }}
+       loading="eager"
+       title="3D Computer Animation"
+       allow="accelerometer; gyroscope; fullscreen; xr-spatial-tracking" 
+       // 🚀 remove sandbox unless absolutely needed
+     />
+     
         )}
         
         {/* Enhanced Interactive Fallback */}

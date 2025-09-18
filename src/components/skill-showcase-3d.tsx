@@ -415,7 +415,7 @@ const SkillShowcase3D = () => {
       </AnimatePresence>
 
       {/* Navigation Dots */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10">
         <div className="flex space-x-3">
           {skills.map((skill, index) => (
             <button

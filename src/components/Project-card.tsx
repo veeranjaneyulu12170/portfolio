@@ -137,7 +137,7 @@ export function ProjectCard({ project, index, isHovered, onHover }: ProjectCardP
       <style >{keyframes}</style>
 
       <Card
-         className={`group relative overflow-hidden cursor-pointer rounded-xl border-white/50 transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/20 ${getGridClasses(project.size)}`}
+         className={`group relative overflow-hidden cursor-pointer bg-black/40 rounded-xl border-white/50 transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/20 ${getGridClasses(project.size)}`}
          onMouseEnter={() => onHover(project.id)}
          onMouseLeave={() => onHover(null)}
         style={{
@@ -171,11 +171,11 @@ export function ProjectCard({ project, index, isHovered, onHover }: ProjectCardP
 
 <div
   className={`relative ${getCardHeights(project.size).content} 
-    bg-black/50 backdrop-blur-3xl  flex flex-col text-white`}
+    bg-black backdrop-blur-sm flex flex-col text-white`}
 >
 
           {/* Content header - flexible space */}
-          <div className="flex-1 ml-2 mb-2 mt-2 mb-2 font-mono space-y-2 min-h-0 overflow-hidden">
+          <div className="backdrop-blur-lg flex-1 ml-2 mb-2 mt-2 mb-2 font-mono space-y-2 min-h-0 overflow-hidden ">
             {/* Category and year */}
             <div className="flex items-center justify-between ">
               <Badge

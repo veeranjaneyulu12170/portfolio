@@ -13,6 +13,7 @@ import Footer from '@/components/Footer';
 
 import { ProjectGrid } from '@/components/Project-grid';
 import SkillShowcase3D from '@/components/skill-showcase-3d';
+import AnimatedExperience from '@/components/Experience';
 
 const Index = () => {
   return (
@@ -21,14 +22,11 @@ const Index = () => {
       <Hero />
       <About />
       <SkillShowcase3D />
-      
-      <ProjectGrid />
-      <WebDevelopment />
-      <UIUXDesign />
-      <FullStack />
-      <GraphicDesign />
-      <ProjectShowcase />
-      <Experience />
+   <ProjectGrid/>
+  
+       <GraphicDesign />
+     
+      <AnimatedExperience />
       <Contact />
       <Footer />
     </div>

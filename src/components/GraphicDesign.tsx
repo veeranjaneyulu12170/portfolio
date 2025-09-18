@@ -50,7 +50,7 @@ const GraphicDesign = () => {
     }
   ];
 
-  const categories = ["All", "Brand Identity", "Packaging Design", "Product Design", "Product Photography"];
+  const categories = [ "All","Motion Graphics ", "Packaging/Product Design", "Logo Animation", "VFX"];
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects = activeCategory === "All" 
@@ -69,16 +69,16 @@ const GraphicDesign = () => {
     <section id="graphics" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-rich-brown mb-4">
+          <h2 className="press-start-2p-regular1 text-4xl md:text-5xl font-bold text-white m-5">
             Graphic Design & VFX
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-white font-mono text-lg text-muted-foreground max-w-2xl mx-auto">
             Visual storytelling through product animation, brand identity, and creative design
           </p>
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="text-white flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
             <Button
               key={category}
